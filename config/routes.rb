@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-  root 'posts#index' 
+  root 'posts#index'
 
   get 'posts/new' => 'posts#new', as: :new_post
   post 'posts' => 'posts#create', as: :posts
-  patch 'posts/:id' => 'posts#update', as: :edit_post
+  get 'posts/:id' => 'posts#show', as: :post
+  get 'posts/:id/edit' => 'posts#edit', as: :edit_post
+  patch 'posts/:id' => 'posts#update'
+  delete 'posts/:id' => 'posts#delete'
 
 
 

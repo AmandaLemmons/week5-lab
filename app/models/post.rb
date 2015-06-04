@@ -4,4 +4,11 @@ class Post < ActiveRecord::Base
   validates :link, presence: true
 
 
+  def initialize
+    @vote 
+
+  end
+
+
+
 end
