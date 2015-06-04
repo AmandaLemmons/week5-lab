@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.all.order("votes desc")
+    render :index
   end
 
   def new
@@ -13,7 +14,7 @@ class PostsController < ApplicationController
 
 
   def create
-    @post = Post.new params.require(:post).permit(:title, :link, :votes)
+    @post = Post.new params.require(:post).permit(:title, :link)
 
     if @post.save
       redirect_to root_path
@@ -24,8 +25,12 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find params[:id]
+    @post.votes += 1
+    @post.save
     redirect_to @post.link
+
   end
+
 
 
   def update
@@ -42,6 +47,9 @@ class PostsController < ApplicationController
     @post.destroy
     redirect_to root_path
   end
+
+
+
 
 
 end

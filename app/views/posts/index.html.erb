@@ -5,9 +5,11 @@
   <ul>
     <% @posts.each do |post| %>
   <li>
+
     <%= link_to post.title, post_path(id: post.id)  %>
     <%=truncate(post.link) %>
-    <%= post.votes %>
+    <%=post.votes %>
+
     <%= link_to 'Edit', edit_post_path(id: post.id)%>
     <%= link_to 'Delete', post_path(id: post.id), method: 'delete', data: {confirm: 'Are you sure you want to delete this post?'}%>
   </li>
