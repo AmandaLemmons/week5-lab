@@ -1,2 +1,14 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<h1>Welcome to Reddit</h1>
+
+  <%= link_to 'Add a new post!', new_post_path %>
+
+  <ul>
+    <% @posts.each do |p| %>
+  <li>
+    <%= p.title %>
+    <%=p.link %>
+    <%= p.votes %>
+  </li>
+<% end %>
+
+</ul>
