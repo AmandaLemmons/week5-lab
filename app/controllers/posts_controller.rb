@@ -12,7 +12,6 @@ class PostsController < ApplicationController
     @post = Post.find params[:id]
   end
 
-
   def create
     @post = Post.new params.require(:post).permit(:title, :link)
 
@@ -25,10 +24,9 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find params[:id]
-    @post.votes += 1
+    @post.votes += 1 #next three lines were orig in show
     @post.save
     redirect_to @post.link
-
   end
 
 
@@ -47,9 +45,5 @@ class PostsController < ApplicationController
     @post.destroy
     redirect_to root_path
   end
-
-
-
-
 
 end
