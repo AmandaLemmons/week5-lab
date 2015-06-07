@@ -1,23 +1,22 @@
 <div class="container">
   <div class="jumbotron">
-    <h1>Welcome to Reddit</h1>
-    <p><a class="btn btn-primary btn-lg"<%= link_to 'Add a new post!', new_post_path %></p> </a>
+    <h1>Beautiful Beaches</h1>
+    <p><a class="btn btn-primary btn-lg"<%= link_to 'Add a new beach!', new_post_path %></p> </a>
   </div>
 
-    <% @posts.each do |post| %>
-    <div class="well">
-      <ul>
-        <a <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
-          <%=post.votes %>
-            <a <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></a>
-              <%= link_to post.title, post_path(id: post.id)  %>
-                <%=truncate(post.link) %>
+  <% @posts.each do |post| %>
+  <div class="well">
+  
 
-
-                 <a class="btn btn-primary btn-md" <%= link_to 'Edit', edit_post_path(id: post.id)%></a>
-                 <a class="btn btn-primary btn-md" <%= link_to 'Delete', post_path(id: post.id), method: 'delete', data: {confirm: 'Are you sure you want to delete this post?'}%></a>
+          <a  <span class="glyphicon glyphicon-arrow-up "  <%= link_to "", upvote_path(id: post.id)%> </span> </a>
+             <% post.votes %>
+          <a <span class="glyphicon glyphicon-arrow-down" <%= link_to "", downvote_post_path(id: post.id)%></a>
+            <%= link_to post.title, (post.link)  %>
+            <%=truncate(post.link) %>
+          <a class="btn btn-primary btn-sm" <%= link_to 'Edit', edit_post_path(id: post.id)%></a>
+          <a class="btn btn-primary btn-sm" <%= link_to 'Delete', post_path(id: post.id), method: 'delete', data: {confirm: 'Are you sure you want to delete this post?'}%></a>
 
     </div>
-      <% end %>
-        </ul>
+    <% end %>
+
 </div>

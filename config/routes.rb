@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
   root 'posts#index'
 
+
+  get 'users/:id' => 'users#show2', as: :user
+
   get 'posts/new' => 'posts#new', as: :new_post
   post 'posts' => 'posts#create', as: :posts
   get 'posts/:id' => 'posts#show', as: :post
+  get 'posts//:id/downvote' => 'posts#downvote', as: :downvote_post
   get 'posts/:id/edit' => 'posts#edit', as: :edit_post
+  get 'posts/:id/upvote' => 'posts#upvote', as: :upvote
   patch 'posts/:id' => 'posts#update'
   delete 'posts/:id' => 'posts#delete'
 
