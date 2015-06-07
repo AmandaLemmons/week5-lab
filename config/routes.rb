@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  get 'users' => 'users#index', as: :users
+
+
+  get 'links' => 'links#index', as: :links
+
+
   root 'posts#index'
-
-
-  get 'users/:id' => 'users#show2', as: :user
 
   get 'posts/new' => 'posts#new', as: :new_post
   post 'posts' => 'posts#create', as: :posts

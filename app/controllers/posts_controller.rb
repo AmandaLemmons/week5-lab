@@ -3,9 +3,6 @@ class PostsController < ApplicationController
     @posts = Post.all.order("votes desc")
     render :index
   end
-
-
-
   def new
     @post = Post.new
   end
