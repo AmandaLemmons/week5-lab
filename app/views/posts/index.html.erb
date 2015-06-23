@@ -1,8 +1,11 @@
 <div class="container">
-  <div class="jumbotron">
+  <!-- <div class="jumbotron">
     <h1>Beautiful Beaches</h1>
     <p><a class="btn btn-primary btn-lg"<%= link_to 'Add a new beach!', new_post_path %></p> </a>
-  </div>
+  </div> -->
+
+  <h1> Reddit </h1>
+  <h4> Where would you like to escape to today? </h4>
 
   <% @posts.each do |post| %>
   <div class="well">
@@ -10,9 +13,10 @@
               <%= post.votes %>
           <a <span class="glyphicon glyphicon-arrow-down" <%= link_to "", downvote_post_path(id: post.id)%></a>
             <%= link_to post.title, (post.link)  %>
-            <%=truncate((post.link)) %>
-          <a class="btn btn-primary btn-md" <%= link_to 'Edit', edit_post_path(id: post.id)%></a>
-          <a class="btn btn-primary btn-md" <%= link_to 'Delete', post_path(id: post.id), method: 'delete', data: {confirm: 'Are you sure you want to delete this post?'}%></a>
+            <p> <em>Posted:</em> <%=distance_of_time_in_words_to_now post.created_at %> </p>
+
+          <!-- <a class="btn btn-primary btn-sm" <%= link_to 'Edit', edit_post_path(id: post.id)%></a>
+          <a class="btn btn-primary btn-sm" <%= link_to 'Delete', post_path(id: post.id), method: 'delete', data: {confirm: 'Are you sure you want to delete this post?'}%></a> -->
 
     </div>
     <% end %>
