@@ -1,14 +1,10 @@
 <div class="container">
-  <!-- <div class="jumbotron">
-    <h1>Beautiful Beaches</h1>
-    <p><a class="btn btn-primary btn-lg"<%= link_to 'Add a new beach!', new_post_path %></p> </a>
-  </div> -->
 
   <h1> Reddit </h1>
   <h4> Where would you like to escape to today? </h4>
 
   <% @posts.each do |post| %>
-  <div class="well">
+  <div class="well col-xs-12">
           <a  <span class="glyphicon glyphicon-arrow-up "  <%= link_to "", upvote_path(id: post.id)%> </span> </a>
               <%= post.votes %>
           <a <span class="glyphicon glyphicon-arrow-down" <%= link_to "", downvote_post_path(id: post.id)%></a>
