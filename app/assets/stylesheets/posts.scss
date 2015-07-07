@@ -1,16 +1,25 @@
 body {
-  background-color: #DFE2DB;
+  background-color: #F2F2F3;
 }
 
 .container {
+  text-align: center;
   h1 {
     font-family: 'Open Sans Condensed', sans-serif;
-    color: #7D1935;
-    font-size: 50px;
+    color: #1FDA9A;
+    font-size: 65px;
+    text-align: left
   }
   h4 {
     font-family: 'Oswald', sans-serif;
-    color: #4A96AD;
+    color: #E9BC1B;
+    font-size: 25px;
+  }
+  .btn-signin {
+    background-color: #1FDA9A;
+    font-family: 'Oswald', sans-serif;
+    color:  #F5EACD;
+    font-size: 25px;
   }
 }
 
@@ -21,14 +30,15 @@ body {
   }
 
   .well {
-  background-color: #FFF056;
+  background-color: #EE4B3E;
   font-family: 'Oswald', sans-serif;
   text-align: left;
-  font-size: 16px;
-  color: #191919;
+  font-size: 18px;
+  color: #E9BC1B;
+
   }
   a {
-  color: #7D1935;
+  color: #1FDA9A;
   font-family: 'Oswald', sans-serif;
   }
   .center {
@@ -37,22 +47,43 @@ body {
   .btn {
   margin-left: 15px;
   }
+
   .glyphicon {
-    font-size: 20px;
-    color: #7E8F7C;
+    font-size: 25px;
+    color: #F5EACD;
   }
+
   .nav p{
       font-family: 'Oswald', sans-serif;
       display: inline;
-
     a{
-      color: #7D1935;
+      color: #EE4B3E;
       text-decoration: none;
-      font-size: 20px;
-      padding-top: 5%;
-      padding-left: 5%;
-    :hover {
-    color: red;
+      font-size: 30px;
+      padding: 125px;;
+    }
   }
-  }
+
+  .jumbotron {
+    background-color: F2F2F3;
+    h1 {
+      font-family: 'Open Sans Condensed', sans-serif;
+      color: #1FDA9A;
+      font-size: 65px;
+    }
+    .label {
+      font-family: 'Oswald', sans-serif;
+      color: #E9BC1B;
+      font-size: 25px;
+    }
+    .btn-signin {
+      background-color: #EE4B3E;
+      font-family: 'Oswald', sans-serif;
+      color:  #F5EACD;
+      font-size: 25px;
+    }
+    p {
+      font-family: 'Oswald', sans-serif;
+      color: #E9BC1B;
+    }
   }

@@ -1,14 +1,18 @@
-<%= form_for @post do |f| %>
-<div class="form-group">
-  <div class="caption">
 
-    <h3> Title</h3>
-    <%= f.text_field :title, class: "form-control" %>
-    <h3> Link</h3>
-    <%= f.text_field :link, class: "form-control" %>
-     
-    <h3> </h3>
-    <%= f.submit class: "btn btn-primary" %>
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= simple_form_for @post do |f| %>
+        <div class="label">
+          <h3> Title</h3>
+          <%= f.text_field :title, class: "form-control" %>
+          <h3> Link</h3>
+          <%= f.text_field :link, class: "form-control" %>
+            <div class="btn-signin">
+              <%= f.submit class: "btn btn-primary" %>
+            </div>
+        </div>
+    </div>
   </div>
-
-  <%end%>
+    <%end%>
+</div>

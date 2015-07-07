@@ -4,26 +4,26 @@
 
 
     <%= form_tag auth_path, method: :post do %>
-      <div>
+      <div class="label">
         <%= label_tag :name %>
         <%= text_field_tag :name, "", class: "form-control" %>
       <br>
       </div>
 
-      <div>
+      <div class="label">
         <%= label_tag :email %>
         <%= text_field_tag :email, "", class: "form-control" %>
       <br>
       </div>
 
-    <div>
+    <div class="label">
       <%= label_tag :password %>
       <%= password_field_tag :password, "", class: "form-control" %>
     <br>
     </div>
 
       <div>
-        <%= submit_tag "Log In", class: "btn btn-primary btn-lg" %>
+        <%= submit_tag "Log In", class: "btn btn-primary btn-lg btn-signin" %>
       <br>
       <br>
       </div>
